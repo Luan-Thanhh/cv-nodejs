@@ -26,7 +26,11 @@
             <a class="nav-link" href="#services">Services</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#skills">Skills</a>
+            <a
+              class="nav-link"
+              href="<% if(page !== '/skills'){ %> /skills <% } else { %> # <% } %>"
+              >Skills</a
+            >
           </li>
           <li class="nav-item">
             <a
@@ -46,7 +50,11 @@
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
+            <a
+              class="nav-link"
+              href="<% if(page !== '/contact'){ %> /contact <% } else { %> # <% } %>"
+              >Contact</a
+            >
           </li>
         </ul>
       </div>
