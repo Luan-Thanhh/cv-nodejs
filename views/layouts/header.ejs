@@ -29,10 +29,21 @@
             <a class="nav-link" href="#skills">Skills</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#portfolio">Portfolio</a>
+            <a
+              class="nav-link"
+              href="<% if(page !== '/portfolio'){ %> /portfolio <% } else { %> # <% } %>"
+              >Portfolio</a
+            >
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#experience">Experience</a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="<% if(page !== '/testimonial'){ %> /testimonial <% } else { %> # <% } %>"
+              >Testimonial</a
+            >
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#contact">Contact</a>

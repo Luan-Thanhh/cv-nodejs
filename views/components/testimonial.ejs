@@ -39,30 +39,39 @@
   </head>
   <body id="top">
     <!-- ======= HEADER ======= -->
-    <% if(page === '/portfolio'){ %> <%- include('../layouts/header.ejs') %> <% } else { %> <% } %>
+    <% if(page === '/testimonial'){ %> <%- include('../layouts/header.ejs') %> <% } else { %> <% }
+    %>
 
-    <!-- ======= PORTFOLIO ======= -->
-    <div class="section px-2 px-lg-4 pt-5" id="portfolio">
-      <div class="container">
+    <!-- ======= TESTIMONIAL ======= -->
+    <div class="section px-3 px-lg-4 pt-5" id="testimonials">
+      <div class="container-narrow">
         <div class="text-center mb-5">
-          <h2 class="marker marker-center">Portfolio</h2>
+          <h2 class="marker marker-center">Client Testimonials</h2>
         </div>
-        <div class="grid bp-gallery pb-3" data-aos="zoom-in-up" data-aos-delay="100">
-          <div class="grid-sizer"></div>
-          <% portfolios.forEach( function( portfolio ) { %>
-          <div class="grid-item">
-            <a href="<%= portfolio.website %>">
-              <figure class="portfolio-item">
-                <img
-                  src="<%= portfolio.imageURL %>"
-                  data-bp="<%= portfolio.imageURL.replace('-small.png', '.jpg') %>"
-                />
-                <figcaption>
-                  <h4 class="h5 mb-0"><%= portfolio.job %></h4>
-                  <div><%= portfolio.desc %></div>
-                </figcaption>
-              </figure></a
-            >
+        <div class="row">
+          <% testimonials.forEach( function( testimonial, index ) { %>
+          <div
+            class="col-md-6 mb-5"
+            data-aos="fade-right"
+            data-aos-delay="<%= 200 *( index + 1) %>"
+          >
+            <div class="d-flex ms-md-3">
+              <span><i class="fas fa-2x fa-quote-left"></i></span
+              ><span class="m-2"><%= testimonial.desc %></span>
+            </div>
+            <div class="d-flex justify-content-end align-items-end">
+              <div class="text-end me-2">
+                <div class="fw-bolder"><%= testimonial.name %></div>
+                <div class="text-small"><%= testimonial.job %></div>
+              </div>
+              <img
+                class="me-md-3 rounded"
+                src="<%= testimonial.imageURL %>"
+                width="96"
+                height="96"
+                alt="<%= testimonial.name %>"
+              />
+            </div>
           </div>
           <% }) %>
         </div>
@@ -70,8 +79,14 @@
     </div>
 
     <!-- ======= FOOTER ======= -->
-    <% if(page === '/portfolio'){ %> <%- include('../layouts/footer.ejs') %> <% } else { %> <% } %>
+    <% if(page === '/testimonial'){ %> <%- include('../layouts/footer.ejs') %> <% } else { %> <% }
+    %>
 
+    <div id="scrolltop">
+      <a class="btn btn-secondary" href="#top"
+        ><span class="icon"><i class="fas fa-angle-up fa-x"></i></span
+      ></a>
+    </div>
     <script src="/scripts/imagesloaded.pkgd.min.js?ver=1.2.0"></script>
     <script src="/scripts/masonry.pkgd.min.js?ver=1.2.0"></script>
     <script src="/scripts/BigPicture.min.js?ver=1.2.0"></script>
