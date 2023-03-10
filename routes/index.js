@@ -10,6 +10,7 @@ var testimonialController = require('../controllers/testimonial_controller');
 /* GET home page. */
 router.get('/', homeController.index);
 router.get('/skills', skillController.index);
+router.get('/about', profileController.index);
 router.get('/portfolio', portfolioController.index);
 router.get('/testimonial', testimonialController.index);
 router.get('/contact', profileController.contact);

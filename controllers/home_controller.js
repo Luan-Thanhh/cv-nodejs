@@ -12,10 +12,10 @@ async function index(req, res, next) {
   res.render('index', {
     title: 'Super Folio',
     page: req.url,
+    profile: profiles[0],
     portfolios,
     testimonials,
     skills,
-    profile: profiles[0],
   });
 }
 
