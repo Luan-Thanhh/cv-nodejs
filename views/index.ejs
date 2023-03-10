@@ -56,10 +56,10 @@
                   <div class="mt-5">
                     <p class="lead text-uppercase mb-1">Hello!</p>
                     <h1 class="intro-title marker" data-aos="fade-left" data-aos-delay="50">
-                      I’m Van Thi Thuy Linh
+                      I’m <%= profile.name %>
                     </h1>
                     <p class="lead fw-normal mt-3" data-aos="fade-up" data-aos-delay="100">
-                      Designer & Content Creator
+                      <%= profile.job %>
                     </p>
                     <div class="social-nav" data-aos="fade-up" data-aos-delay="200">
                       <nav role="navigation">
@@ -123,67 +123,7 @@
         </header>
 
         <!-- ABOUT -->
-        <div class="section pt-4 px-3 px-lg-4" id="about">
-          <div class="container-narrow">
-            <div class="row">
-              <div class="col-md-6">
-                <h2 class="h4 my-2">Hello! I’m Van Thi Thuy Linh.</h2>
-                <p>
-                  Tôi đến từ Quảng Trị, năm nay tôi 20 tuổi học trường Đại học Đông Á tại Đà Nẵng.
-                  Chuyên ngành Công nghệ Thông tin
-                </p>
-                <div class="row mt-3">
-                  <div class="col-sm-3">
-                    <div class="pb-1">Tuổi:</div>
-                  </div>
-                  <div class="col-sm-9">
-                    <div class="pb-1 fw-bolder">20</div>
-                  </div>
-                  <div class="col-sm-3">
-                    <div class="pb-1">Email:</div>
-                  </div>
-                  <div class="col-sm-9">
-                    <div class="pb-1 fw-bolder">linh95335@donga.edu.vn</div>
-                  </div>
-                  <div class="col-sm-3">
-                    <div class="pb-1">Facebook:</div>
-                  </div>
-                  <div class="col-sm-9">
-                    <div class="pb-1 fw-bolder">https://facebook.com/linh95335</div>
-                  </div>
-                  <div class="col-sm-3">
-                    <div class="pb-1">Số điện thoại:</div>
-                  </div>
-                  <div class="col-sm-9">
-                    <div class="pb-1 fw-bolder">+0318-111-0011</div>
-                  </div>
-                  <div class="col-sm-3">
-                    <div class="pb-1">Đại chỉ:</div>
-                  </div>
-                  <div class="col-sm-9">
-                    <div class="pb-1 fw-bolder">Đà Nẵng</div>
-                  </div>
-                  <div class="col-sm-3">
-                    <div class="pb-1">Trạng thái:</div>
-                  </div>
-                  <div class="col-sm-9">
-                    <div class="pb-1 fw-bolder">Gất dui😂</div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-5 offset-md-1" data-aos="fade-left" data-aos-delay="100">
-                <img
-                  class="avatar img-fluid mt-2"
-                  src="images/avatar.jpg"
-                  width="400px"
-                  height="400px"
-                  alt="Walter Patterson"
-                  style="overflow: hidden; object-fit: cover"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
+        <%- include('./components/about') %>
 
         <!-- SERVICES  -->
         <div class="section px-3 px-lg-4 pt-5" id="services">

@@ -1,5 +1,15 @@
 const Profile = require('../models/profile');
 
+async function index(req, res, next) {
+  const profiles = await Profile.find({});
+
+  res.render('components/about', {
+    title: 'Super Folio | Profile',
+    page: req.url,
+    profile: profiles[0],
+  });
+}
+
 async function contact(req, res, next) {
   const profiles = await Profile.find({});
 
@@ -10,4 +20,4 @@ async function contact(req, res, next) {
   });
 }
 
-module.exports = { contact };
+module.exports = { index, contact };
